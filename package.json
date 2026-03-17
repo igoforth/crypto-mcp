@@ -1,6 +1,6 @@
 {
   "name": "@igoforth/crypto-mcp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Minimal, auditable MCP server for inspecting Ethereum/Polygon wallet balances and transactions",
   "type": "module",
   "license": "MIT",
@@ -46,6 +46,10 @@
     ".": {
       "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"
+    },
+    "./register": {
+      "types": "./dist/register.d.mts",
+      "import": "./dist/register.mjs"
     }
   },
   "scripts": {
