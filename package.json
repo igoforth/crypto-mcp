@@ -1,0 +1,68 @@
+{
+  "name": "@igoforth/crypto-mcp",
+  "version": "1.0.0",
+  "description": "Minimal, auditable MCP server for inspecting Ethereum/Polygon wallet balances and transactions",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Ian Goforth",
+    "email": "ian.goforth@gmail.com",
+    "url": "https://ian.goforth.systems/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igoforth/crypto-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igoforth/crypto-mcp/issues"
+  },
+  "homepage": "https://github.com/igoforth/crypto-mcp#readme",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ethereum",
+    "polygon",
+    "wallet",
+    "erc20",
+    "viem",
+    "crypto",
+    "balance",
+    "claude"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "crypto-mcp": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.3",
+    "viem": "^2.42.1",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.4",
+    "tsdown": "^0.18.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
